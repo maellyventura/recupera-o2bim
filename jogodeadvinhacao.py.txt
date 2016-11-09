@@ -1,0 +1,31 @@
+﻿from random import *
+des = 1
+while(des != 0):
+    rdm = randint(0,100)
+    tentativa = 3
+    print()
+    print('Tente adivinhar o número secreto de 1 a 100! Você terá 3 tentativas!')
+    print()
+    while tentativa > 0:
+        tentativa = tentativa - 1
+        cha = eval(input('Número: '))
+        print()
+        if cha > rdm:
+            print('O número secreto é menor!')
+            print('Número de tentativas: %d' % tentativa)
+            print()
+        elif cha < rdm:
+            print ('O número secreto é maior!')
+            print('Número de tentativas = %d' % tentativa)
+            print()
+        else:
+            print('Parabéns! Você acertou! O número secreto é: %d' % rdm)
+            tentativa = -1
+
+    if tentativa == 0:
+        print()
+        print('Que pena! Você perdeu! Mais sorte da próxima vez!')
+        print('O número secreto é: %d' % rdm)
+    print ('Deseja continuar jogando ?')
+    print ('1 - sim, 0 - nao')
+    des = int(input())
